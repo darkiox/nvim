@@ -1,5 +1,6 @@
 require("darkiox.packer")
 require("darkiox.remap")
+require("darkiox.indentation")
 
 vim.opt.clipboard = 'unnamedplus'
 

@@ -91,7 +91,7 @@ vim.cmd [[
     highlight DiagnosticHint guifg=#B5E8E0
 ]]
 
-require('lspconfig').tsserver.setup{
+require('lspconfig').ts_ls.setup{
     on_attach = function(client, bufnr)
         -- Enable document highlighting
         if client.server_capabilities.document_highlight then

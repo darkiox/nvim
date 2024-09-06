@@ -52,5 +52,8 @@ return require('packer').startup(function(use)
   end}
   use('f-person/git-blame.nvim')
   use { 'feline-nvim/feline.nvim' }
+  use 'navarasu/onedark.nvim'
+  use {'tpope/vim-surround'}
+  use {'lewis6991/gitsigns.nvim'}
 end) 
 

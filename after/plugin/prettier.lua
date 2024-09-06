@@ -17,3 +17,10 @@ prettier.setup({
     "yaml",
   },
 })
+
+-- Autocommand to format on save using the :Prettier command
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.css", "*.graphql", "*.html", "*.js", "*.jsx", "*.json", "*.less", "*.md", "*.scss", "*.ts", "*.tsx", "*.yaml" },
+  command = "Prettier",
+})
+
