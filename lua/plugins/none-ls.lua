@@ -19,6 +19,8 @@ return {
 				"stylua", -- lua formatter
 				"shfmt",
 				"ruff",
+				"typescript-language-server",
+				"eslint",
 			},
 			-- auto-install configured formatters & linters (with null-ls)
 			automatic_installation = true,
