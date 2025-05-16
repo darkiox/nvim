@@ -36,4 +36,14 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.leetcode"),
+	require("plugins.surround"),
 })
+
+vim.cmd("highlight LineNr guifg=#5c6370")
+vim.cmd("highlight CursorLineNr guifg=#ebd09c")
+
+vim.o.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor,r-cr:hor20-Cursor,o:hor50"
+vim.cmd([[
+  highlight Cursor guifg=white guibg=red
+  highlight lCursor guifg=white guibg=blue
+]])

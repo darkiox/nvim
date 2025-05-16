@@ -115,28 +115,20 @@ return { -- LSP Configuration & Plugins
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			-- tsserver = {},
 			lua_ls = {
-				-- cmd = {...},
-				-- filetypes { ...},
-				-- capabilities = {},
 				settings = {
 					Lua = {
-						runtime = { version = "LuaJIT" },
+						runtime = { version = "lua_ls" },
+						diagnostics = {
+							disable = { "missing-fields" },
+							globals = { "vim", "require" },
+						},
 						workspace = {
-							checkThirdParty = false,
-							-- Tells lua_ls where to find all the Lua files that you have loaded
-							-- for your neovim configuration.
-							library = {
-								"${3rd}/luv/library",
-								unpack(vim.api.nvim_get_runtime_file("", true)),
-							},
-							-- If lua_ls is really slow on your computer, you can try this instead:
-							-- library = { vim.env.VIMRUNTIME },
+							library = vim.api.nvim_get_runtime_file("", true),
 						},
 						completion = {
 							callSnippet = "Replace",
 						},
 						telemetry = { enable = false },
-						diagnostics = { disable = { "missing-fields" } },
 					},
 				},
 			},
