@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	require("plugins.colortheme"),
+	require("plugins.kanagawa"),
 	require("plugins.neotree"),
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
@@ -35,15 +35,15 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
+	require("plugins.trouble"),
 	require("plugins.leetcode"),
-	require("plugins.surround"),
 })
-
 vim.cmd("highlight LineNr guifg=#5c6370")
-vim.cmd("highlight CursorLineNr guifg=#ebd09c")
+-- vim.cmd("highlight CursorLineNr guifg=#ebd09c")
+--
+vim.o.updatetime = 500
 
-vim.o.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor,r-cr:hor20-Cursor,o:hor50"
 vim.cmd([[
-  highlight Cursor guifg=white guibg=red
-  highlight lCursor guifg=white guibg=blue
+  highlight DiagnosticFloating guibg=NONE guifg=#FFFFFF
+  highlight DiagnosticFloatingBorder guibg=NONE guifg=#A0A0A0
 ]])

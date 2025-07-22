@@ -117,7 +117,7 @@ return { -- LSP Configuration & Plugins
 			lua_ls = {
 				settings = {
 					Lua = {
-						runtime = { version = "lua_ls" },
+						runtime = { version = "LuaJIT" },
 						diagnostics = {
 							disable = { "missing-fields" },
 							globals = { "vim", "require" },
@@ -205,7 +205,9 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
-			tailwindcss = {},
+			tailwindcss = {
+				["tailwindcss"] = {},
+			},
 			jsonls = {},
 			sqlls = {},
 			terraformls = {},
