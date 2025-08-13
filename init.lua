@@ -37,6 +37,7 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.trouble"),
 	require("plugins.leetcode"),
+	require("plugins.surround"),
 })
 vim.cmd("highlight LineNr guifg=#5c6370")
 -- vim.cmd("highlight CursorLineNr guifg=#ebd09c")
