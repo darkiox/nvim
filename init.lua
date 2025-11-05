@@ -10,6 +10,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
+vim.opt.termguicolors = true
 
 -- [[ Configure and install plugins ]]
 --
@@ -23,7 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	require("plugins.kanagawa"),
+	require("plugins.nightfox"),
 	require("plugins.neotree"),
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
@@ -38,6 +39,7 @@ require("lazy").setup({
 	require("plugins.trouble"),
 	require("plugins.leetcode"),
 	require("plugins.surround"),
+	require("plugins.avante"),
 })
 vim.cmd("highlight LineNr guifg=#5c6370")
 -- vim.cmd("highlight CursorLineNr guifg=#ebd09c")
